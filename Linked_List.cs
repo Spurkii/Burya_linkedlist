@@ -13,6 +13,8 @@ namespace Burya_linkedlist
 
         public void Add_Node(string _add)
         { 
+            // cleanest way I know to add nodes, by copying the input into the list, then pushing the rest of the list in front of the added input
+            // by simply copying the prior list in front of the new list input
             Node New_Node = new Node(_add);
             New_Node.Data = _add;
             New_Node.Next = _head;
@@ -22,6 +24,8 @@ namespace Burya_linkedlist
 
         public string Delete_Node(string _delete)
         {
+            // Delete_node was the most difficult part of the assignment, also not proud about how bad it looks right now.
+
             // quick return if you try to delete something without anything in the list
             if (_head == null)
             {
@@ -35,8 +39,8 @@ namespace Burya_linkedlist
             }
             _current = _head;
 
-            // Delete_node was the most difficult part of the assignment
-            // while loop to properly go through the list and delete only the first occurance of it
+            // while loop to properly go through the list and delete only the first occurance of it, because my first
+            // attempt deleted all occurances for some reason, and sometimes deleted the entire list except the top of the list
             while (_current.Next != null)
             {
                 if (_current.Next.Data == _delete)
@@ -73,7 +77,7 @@ namespace Burya_linkedlist
 
         public void Print_Node()
         {
-            // print is pretty easy while loop
+            // print is pretty easy while loop that keeps printing out parts of the list until it reaches null
             Node current = _head;
             while (current != null)
             {
