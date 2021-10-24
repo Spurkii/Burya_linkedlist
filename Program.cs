@@ -1,4 +1,8 @@
-﻿using System;
+﻿// Mark Burya
+// IT112 
+// NOTES: not too diffucult of an assignment but could be better done
+// BEHAVIORS NOT IMPLEMENTED AND WHY: I believe I have completed everything that was asked of me.
+using System;
 
 namespace Burya_linkedlist
 {
